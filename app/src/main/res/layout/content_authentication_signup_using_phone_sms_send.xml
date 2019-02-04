@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dimen_login"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_login"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="224dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/create_account_bg"
+                    android:padding="8dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin.6"
+                android:layout_marginTop="@dimen/margin.6"
+                android:layout_marginRight="@dimen/margin.6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewForgotPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_login"
+                    android:gravity="center_horizontal"
+                    android:text="Please enter the 6 digit code that we have send to your phone." />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin.2"
+                    android:layout_marginBottom="@dimen/margin.2"
+                    android:textColorHint="@color/colorPrimaryDark2">
+
+                    <EditText
+                        android:id="@+id/editTextSmsPin"
+                        style="@style/FullWidthEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin.2"
+                        android:layout_marginRight="@dimen/margin.2"
+                        android:layout_marginBottom="@dimen/margin.2"
+
+                        android:hint="6 Digit Code"
+                        android:inputType="phone"
+                        android:shadowColor="@color/colorPrimaryDark2"
+                        android:textColor="@color/colorPrimaryDark2"
+                        android:textColorHighlight="@color/colorPrimaryDark2"
+                        android:textColorHint="@color/colorPrimaryDark2"
+                        android:textColorLink="@color/colorPrimaryDark2"
+                        android:textCursorDrawable="@null" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/buttonVerifySms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin.2"
+                    android:layout_marginTop="@dimen/margin.2"
+                    android:layout_marginRight="@dimen/margin.2"
+
+                    android:background="@drawable/facebook_login_button"
+                    android:text="Verify"
+                    android:textColor="@color/background" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin.2"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewHaventReceivedCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin.2"
+                        android:text="Haven't received the code yet?"
+                        android:textAlignment="textEnd" />
+
+                    <TextView
+                        android:id="@+id/textViewResendCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin.2"
+                        android:text="Resend"
+
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

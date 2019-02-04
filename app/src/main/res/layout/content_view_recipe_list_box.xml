@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/middleBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/margin.3">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin.4"
+                android:layout_marginRight="@dimen/margin.4"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/margin.2"
+                            app:cardCornerRadius="@dimen/margin.1">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/margin.3">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="20"
+                                        android:textColor="@color/colorPrimary"
+                                        android:id="@+id/textViewCookingTime"
+                                        android:textSize="@dimen/text.size.large"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Cooking Time"
+                                        android:layout_marginTop="@dimen/margin.1"
+                                        android:textColor="@color/colorProfileCounterTitle"
+                                        android:id="@+id/textViewCookingTimeTitle"
+                                        android:textSize="@dimen/text.size.small"/>
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/margin.2"
+                            app:cardCornerRadius="@dimen/margin.1">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/margin.3">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Medium"
+                                        android:textColor="@color/colorPrimary"
+                                        android:id="@+id/textViewDifficutly"
+                                        android:textSize="@dimen/text.size.large"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Difficulty"
+                                        android:layout_marginTop="@dimen/margin.1"
+                                        android:textColor="@color/colorProfileCounterTitle"
+                                        android:id="@+id/textViewDifficutlyTitle"
+                                        android:textSize="@dimen/text.size.small"/>
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/margin.2"
+                            app:cardCornerRadius="@dimen/margin.1">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/margin.3">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="12"
+                                        android:textColor="@color/colorPrimary"
+                                        android:id="@+id/textViewIngredients"
+                                        android:textSize="@dimen/text.size.large"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ingredients"
+                                        android:layout_marginTop="@dimen/margin.1"
+                                        android:textColor="@color/colorProfileCounterTitle"
+                                        android:id="@+id/textViewIngredientsTitle"
+                                        android:textSize="@dimen/text.size.small"/>
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/margin.2"
+                            app:cardCornerRadius="@dimen/margin.1">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/margin.3">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="200 g"
+                                        android:textColor="@color/colorPrimary"
+                                        android:id="@+id/textViewPerServing"
+                                        android:textSize="@dimen/text.size.large"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Per serving"
+                                        android:layout_marginTop="@dimen/margin.1"
+                                        android:textColor="@color/colorProfileCounterTitle"
+                                        android:id="@+id/textViewPerServingTitle"
+                                        android:textSize="@dimen/text.size.small"/>
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSendEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height.button.auth"
+        android:layout_alignBottom="@+id/middleBox"
+        android:layout_marginLeft="@dimen/margin.6"
+        android:layout_marginRight="@dimen/margin.6"
+        android:layout_marginBottom="@dimen/margin.4"
+        android:background="@drawable/sign_up_email_button"
+        android:padding="@dimen/margin.3"
+        android:text="Shoping List"
+        android:textColor="@color/background" />
+
+
+</RelativeLayout>

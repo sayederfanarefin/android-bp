@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_marginTop="@dimen/margin.2"
+            android:layout_marginBottom="@dimen/margin.2"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:id="@+id/top">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#252525"
+                    android:textSize="@dimen/text.size.2xl"
+                    android:lineSpacingExtra="2.5sp"
+                    android:text="Categories"
+                    android:layout_marginLeft="@dimen/margin.4"
+                    android:layout_marginTop="@dimen/margin.4"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    />
+
+
+
+                <LinearLayout
+                    android:id="@+id/showCategories"
+                    android:layout_width="108dp"
+                    android:layout_height="@dimen/margin.6"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin.4"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/margin.4"
+                    android:background="@drawable/edittexrroundedcorner_category">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/margin.4"
+                        android:paddingTop="@dimen/margin.1"
+                        android:paddingBottom="@dimen/margin.1"
+                        android:textSize="@dimen/text.size.small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:letterSpacing="0.13"
+                        android:gravity="center_horizontal"
+                        android:text="Category"
+                        android:id="@+id/category"
+                        android:textAllCaps="true"
+                        />
+
+                    <ImageView
+                        android:layout_width="@dimen/text.size.small"
+                        android:layout_height="@dimen/text.size.small"
+                        android:layout_marginRight="@dimen/margin.4"
+                        android:layout_marginLeft="@dimen/margin.3"
+                        android:layout_marginTop="@dimen/margin.2"
+                        android:src="@drawable/arrow_down"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayoutSearch"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/margin.4"
+                    android:layout_marginRight="@dimen/margin.4"
+                    android:layout_marginTop="@dimen/margin.5"
+                    android:layout_height="wrap_content"
+
+
+                    >
+
+                    <EditText
+                        android:id="@+id/editTextSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittexrroundedcorner_gray"
+                        android:paddingLeft="@dimen/margin.6"
+                        android:paddingRight="@dimen/margin.6"
+                        android:paddingBottom="@dimen/margin.4"
+                        android:paddingTop="@dimen/margin.4"
+                        android:textColorHint="@color/colorGray"
+                        android:drawableLeft="@drawable/search"
+                        android:drawableStart="@drawable/search"
+                        android:drawablePadding="@dimen/margin.4"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        android:hint="Search recipes..."/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ListView
+            android:layout_width="108dp"
+            android:layout_height="156dp"
+            android:visibility="gone"
+            android:background="@drawable/edittexrroundedcorner_category"
+            android:divider="@null"
+            android:padding="@dimen/margin.3"
+            android:dividerHeight="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin.4"
+            android:layout_marginTop="@dimen/margin.6"
+            android:id="@+id/categoriesList">
+
+        </ListView>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin.2"
+
+            android:layout_below="@+id/top"
+            android:id="@+id/recyclerViewLikedRecipes">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>
+    </FrameLayout>
+
+
+
+
+
+
+

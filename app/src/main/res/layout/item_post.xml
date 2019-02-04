@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/postItem"
+    android:layout_width="match_parent"
+    android:layout_height="224dp"
+    android:layout_marginLeft="@dimen/margin.4"
+    android:layout_marginRight="@dimen/margin.2"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/postItemImageCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin.4"
+            android:layout_marginRight="@dimen/margin.2"
+            app:cardCornerRadius="@dimen/margin.3">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sample_image" />
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+
+            android:layout_marginTop="86dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/message_container_card_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:elevation="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/margin.1">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin.6">
+
+                    <TextView
+                        android:id="@+id/textViewRecipeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin.2"
+                        android:text="Burger"
+                        android:textColor="@color/colorProfileName"
+                        android:textSize="@dimen/text.size.xl" />
+
+                    <TextView
+                        android:id="@+id/textViewRecipeCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewRecipeName"
+                        android:layout_marginTop="@dimen/margin.1"
+                        android:text="Fast Food"
+                        android:textColor="@color/colorProfileName"
+                        android:textSize="@dimen/text.size.large" />
+
+                    <TextView
+                        android:id="@+id/textViewRecipeTimeToCook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewRecipeCategory"
+                        android:layout_marginTop="@dimen/margin.3"
+                        android:text="23 minutes"
+                        android:textColor="@color/colorProfileLocation"
+                        android:textSize="@dimen/text.size.small" />
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/buttonLike"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin.7"
+        android:elevation="4dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/margin.4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/like_button">
+
+
+            <ImageView
+                android:id="@+id/imageViewLike"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin.3"
+                android:layout_marginTop="@dimen/margin.2"
+                android:layout_marginBottom="@dimen/margin.2"
+                android:src="@drawable/love" />
+
+            <TextView
+                android:id="@+id/textViewLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin.2"
+                android:layout_marginRight="@dimen/margin.3"
+                android:layout_marginBottom="@dimen/margin.2"
+
+                android:gravity="center"
+                android:text="23"
+                android:textColor="@color/colorProifileCounter"
+                android:textSize="@dimen/text.size.medium" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

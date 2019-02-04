@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            >
+
+            <ImageView
+                android:id="@+id/imageViewCoverPhoto"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_height="140dp"
+                android:background="@drawable/gradient_image_view_cover_photo"
+                android:src="@drawable/sample_image" />
+
+
+            <RelativeLayout
+                android:id="@+id/profilePicTop"
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:layout_marginTop="64dp"
+                android:orientation="vertical">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilePictureUpload"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="2dp"
+
+                    />
+
+                <ImageButton
+                    android:id="@+id/buttonTakeSnap"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignEnd="@+id/profilePictureUpload"
+                    android:layout_alignBottom="@+id/profilePictureUpload"
+                    android:background="@mipmap/ic_new_camera"
+                    android:cropToPadding="true" />
+
+
+                <com.hookedonplay.decoviewlib.DecoView xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/dynamicArcView"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    custom:dv_lineWidth="2dp" />
+
+                <Button
+                    android:id="@+id/buttonSettings"
+                    android:layout_width="@dimen/width.button.auth"
+                    android:layout_height="@dimen/height.button.small.auth"
+                    android:layout_marginTop="64dp"
+                    android:background="@drawable/sign_up_email_button"
+                    android:textSize="@dimen/text.size.micro"
+                    android:padding="@dimen/margin.1"
+                    android:text="Settings"
+                    android:layout_marginLeft="@dimen/margin.6"
+                    android:layout_toRightOf="@+id/profilePictureUpload"
+
+                    android:textColor="@color/background" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilePicTop"
+                android:layout_centerHorizontal="true"
+                android:text="Sayed Erfan Arefin"
+                android:textColor="@color/colorProfileName"
+                android:textSize="@dimen/text.size.5xl" />
+
+            <TextView
+                android:id="@+id/textViewUserLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewUserName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin.1"
+                android:layout_marginBottom="@dimen/margin.4"
+                android:text="Magdeburg, Germany"
+                android:textColor="@color/colorProfileLocation"
+                android:textSize="@dimen/text.size.large" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewUserLocation"
+                android:id="@+id/lowerMiddleBoxLinerLayout"
+
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/margin.4"
+                    android:layout_marginRight="@dimen/margin.4"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/margin.1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/textViewRecipes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margin.3"
+                                android:text="56"
+                                android:textColor="@color/colorProifileCounter"
+                                android:textSize="@dimen/text.size.3xl" />
+
+
+                            <TextView
+                                android:id="@+id/textViewRecipesTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewRecipes"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/margin.4"
+                                android:text="Recipes"
+                                android:textColor="@color/colorProfileCounterTitle"
+                                android:textSize="@dimen/text.size.medium" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/textViewViews"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margin.3"
+                                android:text="1.5k"
+                                android:textColor="@color/colorProifileCounter"
+                                android:textSize="@dimen/text.size.3xl" />
+
+
+                            <TextView
+                                android:id="@+id/textViewViewsTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewViews"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/margin.3"
+                                android:text="Views"
+                                android:textColor="@color/colorProfileCounterTitle"
+                                android:textSize="@dimen/text.size.medium" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/textViewFollowers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/margin.3"
+                                android:text="56"
+                                android:textColor="@color/colorProifileCounter"
+                                android:textSize="@dimen/text.size.3xl" />
+
+
+                            <TextView
+                                android:id="@+id/textViewFollowersTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textViewFollowers"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/margin.3"
+                                android:text="Followers"
+                                android:textColor="@color/colorProfileCounterTitle"
+                                android:textSize="@dimen/text.size.medium" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin.3"
+                    android:layout_marginTop="@dimen/margin.4"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin.2"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:src="@drawable/sample_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin.4"
+                            android:layout_marginTop="@dimen/margin.2"
+                            android:text="My Recipes"
+                            android:textColor="@color/colorProfileName"
+                            android:textSize="@dimen/text.size.xl" />
+
+                        <TextView
+                            android:id="@+id/textViewMyRecipesCounter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin.4"
+                            android:layout_marginTop="@dimen/margin.2"
+                            android:layout_marginBottom="@dimen/margin.2"
+                            android:text="23 Recipes"
+                            android:textColor="@color/colorProfileLocation"
+                            android:textSize="@dimen/text.size.medium" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin.2"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:src="@drawable/sample_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin.4"
+                            android:layout_marginTop="@dimen/margin.2"
+                            android:text="Recipes I Liked"
+                            android:textColor="@color/colorProfileName"
+                            android:textSize="@dimen/text.size.xl" />
+
+                        <TextView
+                            android:id="@+id/textViewRecipesILikedCounter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin.4"
+                            android:layout_marginTop="@dimen/margin.2"
+                            android:layout_marginBottom="@dimen/margin.2"
+                            android:text="23 Recipes"
+                            android:textColor="@color/colorProfileLocation"
+                            android:textSize="@dimen/text.size.medium" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <include layout="@layout/content_context_menu" />
+</RelativeLayout>
+
